@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 2400148077710573759}
   - component: {fileID: 2639588324393850660}
   - component: {fileID: 1239884832473594056}
+  - component: {fileID: 6567190836033780724}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -227,6 +228,8 @@ MonoBehaviour:
   rig: {fileID: 2639588324393850660}
   jumpForce: 5
   groundSensor: {fileID: 1239884832473594056}
+  life: 0
+  lifeMax: 100
 --- !u!114 &2400148077710573759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +289,22 @@ MonoBehaviour:
   floor:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &6567190836033780724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4145612100978668550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1ddc407eb9ec1459336cb313fcba9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mask_interactable:
+    serializedVersion: 2
+    m_Bits: 512
+  radius: 2.59
 --- !u!1 &6894604174454984593
 GameObject:
   m_ObjectHideFlags: 0

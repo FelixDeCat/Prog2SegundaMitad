@@ -12,11 +12,16 @@ public class Player : MonoBehaviour
 
     [SerializeField] float jumpForce = 5f;
     [SerializeField] GroundSensor groundSensor;
+
+    public int life = 0;
+    public int lifeMax = 0;
     
     void Start()
     {
         /// puedo obtenerlo de esta manera automatica (si no me queda opcion)
        // rig = GetComponent<Rigidbody>();
+
+        life = lifeMax;
 
         rig.interpolation = RigidbodyInterpolation.Interpolate;
 
@@ -24,6 +29,25 @@ public class Player : MonoBehaviour
         /// cuantos enemigos hay?
         /// 
         //GameManager.instancia.GetEnemies().Length;
+    }
+
+    public void OnHit(int dmg)
+    {
+        life -= dmg;
+
+        print("Hit: " + dmg + " result: " + life);
+
+        if (life <= 0)
+        {
+            life = 0;
+            Death();
+        }
+    }
+
+    void Death()
+
+    {
+        print("Death");
     }
 
 

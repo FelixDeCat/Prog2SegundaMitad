@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Enemy[] enemies;
 
+
     public Enemy[] GetEnemies()
     {
         return enemies;
@@ -25,6 +26,8 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    
 
     void Start()
     {
