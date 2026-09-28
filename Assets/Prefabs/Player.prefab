@@ -122,6 +122,7 @@ MonoBehaviour:
   rig: {fileID: 2639588324393850660}
   jumpForce: 5
   groundSensor: {fileID: 1239884832473594056}
+  myAnim: {fileID: 5096529576850701068}
   life: 0
   lifeMax: 100
 --- !u!114 &2400148077710573759
@@ -309,6 +310,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a48db2e87e84bea409a38084033f38c3, type: 2}
+    - target: {fileID: 5866666021909216657, guid: b1c844096a8967b4f80325110fdf0ba5, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -317,5 +322,10 @@ PrefabInstance:
 --- !u!4 &1178446053973221750 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b1c844096a8967b4f80325110fdf0ba5, type: 3}
+  m_PrefabInstance: {fileID: 1715896799353734813}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5096529576850701068 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: b1c844096a8967b4f80325110fdf0ba5, type: 3}
   m_PrefabInstance: {fileID: 1715896799353734813}
   m_PrefabAsset: {fileID: 0}

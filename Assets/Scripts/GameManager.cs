@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instancia;
 
-    public Player myPLayer;
+    public Player myPlayer;
 
     [SerializeField] Enemy[] enemies;
 

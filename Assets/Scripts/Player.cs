@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] float jumpForce = 5f;
     [SerializeField] GroundSensor groundSensor;
+    [SerializeField] Animator myAnim;
 
     public int life = 0;
     public int lifeMax = 0;
@@ -75,6 +76,9 @@ public class Player : MonoBehaviour
         {
             rig.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
         }
+
+        myAnim.SetFloat("xAxis", input.x);
+        myAnim.SetFloat("yAxis", input.z);
 
     }
 
