@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 
@@ -13,6 +14,8 @@ public class Player : MonoBehaviour
     [SerializeField] float jumpForce = 5f;
     [SerializeField] GroundSensor groundSensor;
     [SerializeField] Animator myAnim;
+
+    [SerializeField] WeaponData weaponData;
 
     public int life = 0;
     public int lifeMax = 0;
@@ -70,6 +73,10 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             shoot_module.Shoot();
+        }
+        if (Input.GetButtonDown("Fire2"))
+        {
+            Debug.Log("ataco con: " + weaponData.name + " hace " + weaponData.damage + " de daño");
         }
 
         if (Input.GetButtonDown("Jump") && groundSensor.IsGrounded())
